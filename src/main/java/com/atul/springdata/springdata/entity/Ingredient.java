@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import javax.persistence.OneToOne;
 import java.math.BigDecimal;
 
 
@@ -23,4 +24,7 @@ public class Ingredient {
     private BigDecimal amount;
 
     private Recipe recipe;
+
+    @OneToOne
+    private UnitOfMeasure unitOfMeasure;
 }
